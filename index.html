@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>👾 볼프강의 게임메모리 - MOTHER 3 👾</title>
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; overflow: hidden; }
         #game { width: 100vw; height: 100vh; }
     </style>
 </head>
@@ -15,7 +15,6 @@
         window.onload = function() {
             new EmuJS("#game", {
                 core: "gba",
-                // 🛡️ 중요: 깃허브 LFS의 '실제 데이터' 주소를 직접 입력했습니다.
                 gameUrl: "https://media.githubusercontent.com/media/jsjrkang-hue/AOF/main/MT3.gba",
                 dataUrl: "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/",
                 active: true,
