@@ -1,19 +1,29 @@
-<div align="center" style="margin: 40px 0;">
-    <h3 style="color: #333;">🕹️ 마더 3 (Mother 3) 한글판</h3>
-    <p>제작사/장르: 닌텐도 / RPG 🏢</p>
-    
-    <br>
-    <a href="https://jsjrkang-hue.github.io/AOF/" target="_blank" 
-       style="display: inline-block; padding: 18px 35px; background-color: #e74c3c; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);">
-       🎮 마더 3 게임 실행하기 (클릭)
-    </a>
-    
-    <p style="margin-top: 15px; color: #888; font-size: 13px;">
-       ※ 별도의 창에서 고화질로 쾌적하게 플레이할 수 있습니다. 👾
-    </p>
-</div>
-
-<br>
-<div align="center">
-  <b>👾 볼프강의 게임메모리 👾</b>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👾 볼프강의 게임메모리 - MOTHER 3 👾</title>
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; display: flex; align-items: center; justify-content: center; }
+        #game-container { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>
+    <script>
+        window.onload = function() {
+            new EmuJS("#game-container", {
+                core: "gba",
+                // 🛡️ 파일명을 소문자/대문자 확실히 구분하여 전체 경로로 수정했습니다.
+                gameUrl: "https://raw.githubusercontent.com/jsjrkang-hue/AOF/main/MT3.gba",
+                dataUrl: "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/",
+                active: true,
+                autoStart: true,
+                style: "width:100%; height:100%;"
+            });
+        };
+    </script>
+</body>
+</html>
