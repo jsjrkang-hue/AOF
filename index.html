@@ -15,8 +15,8 @@
         window.onload = function() {
             new EmuJS("#game", {
                 core: "gba",
-                // 🛡️ 파일이 들어있는 'master' 브랜치 전용 주소로 연결합니다!
-                gameUrl: "https://media.githubusercontent.com/media/jsjrkang-hue/AOF/master/MT3.gba",
+                // 🛡️ 캐시 문제를 방지하기 위해 주소 뒤에 랜덤 번호를 붙였습니다. (반영 즉시 확인용)
+                gameUrl: "https://media.githubusercontent.com/media/jsjrkang-hue/AOF/master/MT3.gba?v=" + new Date().getTime(),
                 dataUrl: "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/",
                 active: true,
                 autoStart: true
